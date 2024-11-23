@@ -8,4 +8,4 @@ def check_internet_connection():
     return False
 
 if __name__ == '__main__':
-  check_internet()
+  check_internet_connection()
