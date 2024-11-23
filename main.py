@@ -1,4 +1,5 @@
 import speedtest
+from verify_connection import check_internet_connection
 
 def run():
   st = speedtest.Speedtest()
@@ -17,4 +18,7 @@ def run():
   print(f"Ping: {ping:.2f} ms")
 
 if __name__ == "__main__":
-  run()
+  if check_internet_connection():
+    run()
+  else:
+    print('There is no internet connection to test')
